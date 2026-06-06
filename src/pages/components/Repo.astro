@@ -4,3 +4,26 @@ const response = await fetch(
 );
 const repos: any[] = await response.json();
 ---
+
+<section class="repo-section">
+  <h2>Check what i've been working on</h2>
+
+  <div class="repo-wrapper">
+    <ul class="repo-list">
+      {
+        repos.map((repo) => (
+          <li class="repo-card">
+            <a href={repo.html_url} target="_blank">
+              <span class="repo-name">{repo.name}</span>
+              <span class="repo-desc">
+                {repo.description || "One of my works :)"}
+              </span>
+              <span class="repo-lang">{repo.language || "—"}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="fade-overlay"></div>
+  </div>
+</section>
