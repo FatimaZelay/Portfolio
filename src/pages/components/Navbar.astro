@@ -1,0 +1,50 @@
+---
+import home from "../../assets/home.svg";
+import about from "../../assets/about.svg";
+import contact from "../../assets/contact.svg";
+---
+
+<nav class="navbar">
+  <div class="logo">Fatima Zohra</div>
+  <ul class="nav-links">
+    <li><a href="/"><img src={home.src} alt="home" /></a></li>
+    <li><a href="/about"><img src={about.src} alt="about" /></a></li>
+    <li><a href="/contact"><img src={contact.src} alt="contact" /></a></li>
+  </ul>
+</nav>
+
+<style>
+  .navbar {
+    background-color: #e1dbce;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
+    font-family: "Playfair Display", cursive;
+    height: 140px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav-links img {
+    height: 48px;
+  }
+</style>
